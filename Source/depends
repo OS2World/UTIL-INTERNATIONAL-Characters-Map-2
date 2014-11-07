@@ -1,0 +1,82 @@
+OBJLST = cmap_clipboard.obj   \
+         cmap_status.obj      \
+         cmap_fonts.obj       \
+         cmap_application.obj \
+         cmap_specs.obj       \
+         cmap_glyph.obj       \
+         cmap_main.obj        \
+         cmap_grid.obj        \
+         cmap_about.obj       \
+         pm_exclusion.obj     \
+         pm_messages.obj      \
+         pm_error.obj         \
+         pm_frame.obj         \
+         pm_combobox.obj      \
+         pm_window.obj        \
+         pm_thread.obj        \
+         pm_profile.obj       \
+         pm_gui.obj
+
+cmap_status.h:        pm_window.h
+cmap_about.h:         pm_frame.h
+cmap_specs.h:         pm_frame.h
+cmap_grid.h:          pm_window.h         \
+                      pm_thread.h         \
+                      pm_exclusion.h
+cmap_glyph.h:         pm_window.h
+cmap_application.h:   pm_combobox.h       \
+                      pm_frame.h          \
+                      cmap_grid.h         \
+                      cmap_status.h       \
+                      cmap_specs.h        \
+                      cmap_glyph.h
+
+pm_window.h:          pm_error.h
+pm_frame.h:           pm_window.h
+pm_combobox.h:        pm_window.h
+
+pm_error.cpp:         pm_error.h
+pm_gui.cpp:           pm_error.h          \
+                      pm_gui.h
+pm_thread.cpp:        pm_error.h          \
+                      pm_gui.h            \
+                      pm_thread.h
+pm_messages.cpp:      pm_error.h          \
+                      pm_messages.h
+pm_window.cpp:        pm_window.h         \
+                      pm_gui.h
+pm_frame.cpp:         pm_frame.h
+pm_combobox.cpp:      pm_combobox.h
+pm_exclusion.cpp:     pm_exclusion.h
+pm_profile.cpp:       pm_profile.h
+
+cmap_status.cpp:      cmap_status.h
+cmap_about.cpp:       cmap_about.h        \
+                      cmap_ids.h          \
+                      pm_messages.h
+cmap_clipboard.cpp:   cmap_clipboard.h    \
+                      pm_error.h          \
+                      pm_gui.h
+cmap_grid.cpp:        cmap_grid.h         \
+                      cmap_ids.h          \
+                      pm_gui.h
+cmap_glyph.cpp:       cmap_glyph.h        \
+                      pm_gui.h
+cmap_fonts.cpp:       cmap_fonts.h        \
+                      pm_error.h          \
+                      pm_gui.h
+cmap_specs.cpp:       cmap_specs.h        \
+                      cmap_ids.h          \
+                      pm_messages.h
+cmap_application.cpp: cmap_application.h  \
+                      cmap_clipboard.h    \
+                      cmap_about.h        \
+                      cmap_fonts.h        \
+                      cmap_ids.h          \
+                      pm_messages.h       \
+                      pm_gui.h
+cmap_main.cpp:        cmap_application.h  \
+                      cmap_ids.h          \
+                      pm_messages.h       \
+                      pm_error.h          \
+                      pm_gui.h

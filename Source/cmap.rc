@@ -1,0 +1,28 @@
+#define INCL_WINSYS
+#define INCL_WINBIDI
+#define INCL_WINSTDDLGS
+#define INCL_WINSTDSPIN
+#define INCL_NLS
+#define INCL_SW
+
+#include <os2.h>
+#include "cmap_ids.h"
+
+ICON   ID_WIN_MAIN     "bmp\\charmap.ico"
+
+MENU ID_MNU_MAIN MOVEABLE DISCARDABLE
+BEGIN
+    MENUITEM "~Add character to clipboard\tEnter" , ID_ITM_ADD  , MIS_TEXT
+    MENUITEM "C~lear clipboard\tDel"              , ID_ITM_CLEAR, MIS_TEXT
+    MENUITEM "Font ~Specifications\tCtrl-S"       , ID_ITM_SPECS, MIS_TEXT
+    MENUITEM SEPARATOR
+    MENUITEM "~Enable RTF support"                , ID_ITM_RTF  , MIA_CHECKED
+    MENUITEM SEPARATOR
+    MENUITEM "~Close \tAlt-F4"                    , ID_ITM_CLOSE, MIS_TEXT
+END
+
+ACCELTABLE ID_ACL_MAIN
+BEGIN
+    "s", ID_BTN_SPECS, CONTROL
+    "S", ID_BTN_SPECS, CONTROL
+END

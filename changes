@@ -1,0 +1,34 @@
+History of changes
+
+Version 2.0.5
+
+  - Fixed english translation. Thank to Tae Wong.
+  - Now used WarpIN for application installation.
+  - The source code now can be obtained from git repository
+  hosted on Bitbucket: https://bitbucket.org/glassman/charmap
+
+Version 2.0.4
+
+   - Added a workaround for drawing fonts that have an abnormally
+   large lMaxCharInc or lMaxBaselineExt. Thanks to Alex Taylor.
+
+Version 2.0.3
+
+   - Characters Map/2 is translated to German language. Thanks to
+   Christian Hennecke.
+
+Version 2.0.2
+
+   - The selected font, size and codepage are restored after restart 
+   of the program.
+   - Characters Map/2 now use WarpSans font for dialogs if it is possible.
+   - Characters Map/2 is now covered by the GPL.
+
+Version 2.0.1
+
+   - Problems with opening the message catalog at start of the
+   program from other directory.
+
+Version 2.0.0
+ 
+   - Second public release.
